@@ -30,3 +30,25 @@
 - CommonJS (CJS): The traditional module system in NodeJS that uses synchronous require() calls to import modules and module.exports to export them.
 
 - ES Modules (ESM): The modern standard for modules that uses asynchronous import and export statements. ES Modules can be used with .mjs file extension or by setting "type": "module" in package.json.
+
+#### Some Modules of NodeJS Used Commonly in Development:
+
+### Express:
+
+- Purpose: A minimal and flexible web framework that provides a robust set of features for building web and mobile applications.
+
+- The express module allows you to create a web server and handle various HTTP requests like GET and POST.
+
+- Installation: Run npm install express to add it to your project.
+
+```const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
+
+app.listen(3000, () => {
+  console.log('Server is running on port 3000');
+});
+```
