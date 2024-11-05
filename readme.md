@@ -52,3 +52,17 @@ app.listen(3000, () => {
   console.log('Server is running on port 3000');
 });
 ```
+
+### Lodash:
+
+- Purpose: A utility library that provides helpful functions for working with arrays, objects, and other data types.
+
+- Lodash provides utility functions that simplify common programming tasks, such as manipulating arrays and objects.
+
+Installation: Run npm install lodash to add it to your project.
+
+```const _ = require('lodash');
+const array = [1, 2, 3];
+
+console.log(_.reverse(array)); // Output: [3, 2, 1]
+```
