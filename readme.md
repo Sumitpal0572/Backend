@@ -66,3 +66,29 @@ const array = [1, 2, 3];
 
 console.log(_.reverse(array)); // Output: [3, 2, 1]
 ```
+
+### Async:
+
+- Purpose: A utility module for managing asynchronous operations and flows, such as series and parallel executions.
+
+- The async module helps manage multiple asynchronous operations, ensuring tasks are completed in a specified order.
+
+Installation: Run npm install async to add it to your project.
+
+```const async = require('async');
+
+async.series([
+ function(callback) {
+   setTimeout(() => callback(null, 'Result 1'), 1000);
+ },
+ function(callback) {
+   setTimeout(() => callback(null, 'Result 2'), 500);
+ }
+], (err, results) => {
+ if (err) {
+   console.error(err);
+ } else {
+   console.log(results); // Output: ['Result 1', 'Result 2']
+ }
+});
+```
