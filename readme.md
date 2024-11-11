@@ -92,3 +92,23 @@ async.series([
  }
 });
 ```
+
+#### Third-Party Modules:
+
+### Axios:
+
+- Purpose: A promise-based HTTP client for making requests to APIs.
+- Installation: Run npm install axios to add it to your project.
+
+```const axios = require('axios');
+
+axios.get('https://api.example.com/data')
+  .then(response => {
+    console.log(response.data);
+  })
+  .catch(error => {
+    console.error(error);
+  });
+```
+
+### Built-in NodeJS Modules:
