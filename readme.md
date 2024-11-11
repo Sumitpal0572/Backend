@@ -112,3 +112,10 @@ axios.get('https://api.example.com/data')
 ```
 
 ### Built-in NodeJS Modules:
+
+- NodeJS provides several built-in modules that offer core functionalities without requiring installation from npm.
+
+### Crypto:
+
+- Purpose: Provides cryptographic functionality, including operations like hashing, encryption, and decryption.
+-The crypto module is essential for security-related tasks, such as generating hashes and encrypting data.
