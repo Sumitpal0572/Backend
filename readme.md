@@ -118,4 +118,28 @@ axios.get('https://api.example.com/data')
 ### Crypto:
 
 - Purpose: Provides cryptographic functionality, including operations like hashing, encryption, and decryption.
--The crypto module is essential for security-related tasks, such as generating hashes and encrypting data.
+  -The crypto module is essential for security-related tasks, such as generating hashes and encrypting data.
+
+```const crypto = require('crypto');
+
+const hash = crypto.createHash('sha256');
+hash.update('some data to hash');
+console.log(hash.digest('hex')); // Outputs a SHA-256 hash
+```
+
+### File System (fs):
+
+- Purpose: Provides an API for interacting with the file system, allowing you to read, write, and manage files and directories.
+
+- The fs module is commonly used for file operations, such as reading from and writing to files in NodeJS applications.
+
+```const fs = require('fs');
+
+fs.readFile('example.txt', 'utf8', (err, data) => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+  console.log(data); // Outputs the contents of example.txt
+});
+```
