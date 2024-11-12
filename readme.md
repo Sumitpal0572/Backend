@@ -143,3 +143,17 @@ fs.readFile('example.txt', 'utf8', (err, data) => {
   console.log(data); // Outputs the contents of example.txt
 });
 ```
+
+### Operating System (os):
+
+- Purpose: Provides operating system-related utility functions, such as retrieving information about the current user, system uptime, and available memory.
+
+- The os module allows you to access information about the operating system, which can be useful for optimizing your application based on the environment it runs in.
+
+```const os = require('os');
+
+console.log('OS Platform:', os.platform());
+console.log('CPU Architecture:', os.arch());
+console.log('Total Memory:', os.totalmem());
+console.log('Free Memory:', os.freemem());
+```
