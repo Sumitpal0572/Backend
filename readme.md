@@ -157,3 +157,11 @@ console.log('CPU Architecture:', os.arch());
 console.log('Total Memory:', os.totalmem());
 console.log('Free Memory:', os.freemem());
 ```
+
+## HTTP:
+
+- HTTP is a protocol that defines how messages are formatted and transmitted over the web. It specifies how requests and responses should be structured.
+
+- It allows for the communication between web browsers and servers, enabling the delivery of web pages and services.
+
+- HTTP can be compared to the language used in a conversation where specific rules ensure that both parties understand each other.
