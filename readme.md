@@ -165,3 +165,15 @@ console.log('Free Memory:', os.freemem());
 - It allows for the communication between web browsers and servers, enabling the delivery of web pages and services.
 
 - HTTP can be compared to the language used in a conversation where specific rules ensure that both parties understand each other.
+
+
+### Common HTTP Terminologies:
+- Request: A message from the client requesting resources from the server.
+
+ - Response: The server’s reply to the client’s request.
+
+ - Status Codes: Numeric codes indicating the result of a request (e.g., 200 OK, 404 Not Found).
+
+- Headers: Metadata included with requests and responses (e.g., Content-Type, Authorization).
+
+- Body: The main content of the request or response.
