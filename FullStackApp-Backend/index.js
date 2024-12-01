@@ -1,10 +1,24 @@
+
 const express = require("express");
-const connect = require('./config/db');
+const connect = require("./config/db");
+const cors = require("cors");
+// const bodyParser = require("body-parser");
+const authRoutes = require("./routes/auth.route");
+const productRoutes = require("./routes/product.route");
 
+require("dotenv").config();
 
-const app = express()
+const app = express();
 
-app.listen(3000,async () => {
+//Middleware
+app.use(cors());
+app.use(express.json());
+
+//Routes
+app.use("/api/auth", authRoutes);
+app.use("/api/products", productRoutes);
+
+app.listen(3000, async () => {
     await connect();
-    console.log(`Server is running on port`);
-})
+    console.log("Server is up and running on port 3000");
+});

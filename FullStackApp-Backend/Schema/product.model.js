@@ -10,9 +10,9 @@ const productSchema = new mongoose.Schema({
         required: true,
     },
     description: {
-        trpe: String,
+        type: String,
     },
-    creatdBy: {
+    createdBy: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "User",
     },
