@@ -51,7 +51,7 @@ const ProductForm = ({ productId, fetchProducts, closeForm }) => {
         setSuccess("Product updated successfully!");
       } else {
         // Create new product
-        await axios.post("http://localhost:1234/api/products", formData, {
+        await axios.post("http://localhost:3000/api/products", formData, {
           headers: { Authorization: `Bearer ${auth.accessToken}` },
         });
         setSuccess("Product created successfully!");

@@ -9,7 +9,7 @@ const Login = () => {
     password: "",
   });
   const [error, setError] = useState("");
-  const { setAuth } = useContext(AuthContext);
+  const { login } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -20,15 +20,18 @@ const Login = () => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "http://localhost:1234/api/auth/login",
+        "http://localhost:3000/api/auth/login",
         credentials
       );
-      setAuth({
-        accessToken: res.data.accessToken,
-        refreshToken: res.data.refreshToken,
-      });
-      localStorage.setItem("accessToken", res.data.accessToken);
-      localStorage.setItem("refreshToken", res.data.refreshToken);
+      // Use login function from AuthContext
+      login(res.data.accessToken, res.data.refreshToken); // Pass both tokens to the login function
+
+      // setAuth({
+      //   accessToken: res.data.accessToken,
+      //   refreshToken: res.data.refreshToken,
+      // });
+      // localStorage.setItem("accessToken", res.data.accessToken);
+      // localStorage.setItem("refreshToken", res.data.refreshToken);
       setError("");
       navigate("/products");
     } catch (error) {

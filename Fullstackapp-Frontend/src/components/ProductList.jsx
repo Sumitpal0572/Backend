@@ -9,7 +9,7 @@ const ProductList = () => {
 
   const fetchProducts = async () => {
     try {
-      const res = await axios.get("http://localhost:1234/api/products");
+      const res = await axios.get("http://localhost:3000/api/products");
       setProducts(res.data);
     } catch (error) {
       setError("Failed to fetch products.");
@@ -18,7 +18,7 @@ const ProductList = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:1234/api/products/${id}`, {
+      await axios.delete(`http://localhost:3000/api/products/${id}`, {
         headers: { Authorization: `Bearer ${auth.accessToken}` },
       });
       fetchProducts();

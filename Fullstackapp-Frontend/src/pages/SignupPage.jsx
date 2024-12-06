@@ -19,7 +19,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:1234/api/auth/signup", formData);
+      await axios.post("http://localhost:3000/api/auth/signup", formData);
       setSuccess("Account created successfully! Redirecting to login...");
       setError("");
       setTimeout(() => navigate("/login"), 2000); // Redirect to login page after 2 seconds
